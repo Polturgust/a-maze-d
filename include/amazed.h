@@ -9,6 +9,17 @@
     #define AMAZED_H_
     #include "my.h"
     #include "list.h"
+    #include <stdbool.h>
+
+/*
+** node structure (only for graphique)
+*/
+typedef struct node_s {
+    int number;
+    int pos[2];
+    bool is_start;
+    bool is_end;
+} node_t;
 
 /*
 ** pathing
