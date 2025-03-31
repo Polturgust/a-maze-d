@@ -1,0 +1,4 @@
+amazed
+*.o
+*.gcda
+*.gcno
