@@ -30,7 +30,7 @@ clean:
 		@rm -fr *.gcda
 		@rm -fr $(TOBJ)
 
-fclean: clean fcleanlib
+fclean: clean fcleanlib fcleanbonus
 		@rm -rf $(NAME) $(TNAME)
 
 re: fclean all
@@ -60,3 +60,12 @@ u: unit_tests
 tests_run: unit_tests
 		@./unit_tests && gcovr
 t: tests_run
+
+bonus:	all
+		@make -C ./bonus
+
+cleanbonus:
+		@make clean -C ./bonus
+
+fcleanbonus:
+		@make fclean -C ./bonus
