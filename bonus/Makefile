@@ -5,7 +5,7 @@
 ## is a makefile
 ##
 
-NAME    =       amazed
+NAME    =       amazed_bonus
 
 SRCS    =	src/amazed_graph.c \
 			src/handle_events.c \
@@ -24,13 +24,14 @@ CC	=	gcc
 
 all	:	$(OBJ)
 		$(CC) $(OBJ) $(CFLAGS) -o $(NAME)
-		mv amazed ../amazed
+		mv amazed_bonus ../amazed_bonus
 
 clean	:
 			rm -rf $(OBJ)
-			rm ../amazed
+			rm ../amazed_bonus
 
 fclean	:	clean
 			rm -rf $(NAME)
 
 re	:	fclean all
+
