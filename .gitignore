@@ -2,6 +2,7 @@ amazed
 *.o
 *.gcda
 *.gcno
+*.a
 laby_gen.pl
 lab_15-20.txt
 .vscode
