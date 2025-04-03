@@ -50,6 +50,5 @@ static void read_moves(void)
 void create_elements(void)
 {
     read_moves();
-    show_moves();
     return;
 }
