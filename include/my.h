@@ -28,7 +28,7 @@ typedef struct inf_frmt {
 char *get_file(char *path);
 char *str_dupby(char *str, char *by, int less);
 unsigned int size_wrd(char *str, int forward, char *separ);
-void destroy_array(char **arr);
+void destroy_array(void **arr);
 char *my_strndup(char *str, int n);
 char **str_to_word_array(char *str, char *slice);
 int my_arraylen(char **str);

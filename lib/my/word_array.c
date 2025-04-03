@@ -55,7 +55,7 @@ char **str_to_word_array(char *str, char *separ)
     return array;
 }
 
-void destroy_array(char **arr)
+void destroy_array(void **arr)
 {
     if (!arr)
         return;

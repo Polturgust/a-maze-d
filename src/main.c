@@ -21,13 +21,13 @@ static int is_good_arg(int argc, char **argv)
 int main(int argc, char **argv)
 {
     linked_list_t *node_list = NULL;
-    int **mat_adj = NULL;
+    graph_t *info_graph = NULL;
     int error = is_good_arg(argc, argv);
 
     if (error != 1)
         return error;
-    mat_adj = parth(&node_list);
-    if (!mat_adj)
+    info_graph = parth(&node_list);
+    if (!info_graph)
         return 84;
     return 0;
 }
