@@ -12,6 +12,8 @@ SRCS    =	src/amazed_graph.c \
 			src/create_elements.c \
 			src/draw_elements.c \
 			src/singletons.c \
+\
+			src/resources/my_stwa.c \
 
 OBJ	=	$(MAIN:.c=.o) $(SRCS:.c=.o)
 

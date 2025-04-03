@@ -13,3 +13,10 @@ game_t *game_info(void)
 
     return &game_info;
 }
+
+moves_t *moves_info(void)
+{
+    static moves_t moves_info;
+
+    return &moves_info;
+}

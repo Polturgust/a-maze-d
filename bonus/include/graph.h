@@ -23,6 +23,10 @@ typedef struct game_s {
     sfEvent event;
 } game_t;
 
+typedef struct moves_s {
+    char ***moves;
+} moves_t;
+
 //functions:
 void draw_elements(void);
 void create_elements(void);
@@ -30,8 +34,9 @@ void handle_events(void);
 
 //singletons:
 game_t *game_info(void);
+moves_t *moves_info(void);
 
 //resources:
-
+char **my_stwa(char *input_str, char delimiter);
 
 #endif /* !WORLD_H_ */
