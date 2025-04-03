@@ -68,6 +68,9 @@ BONUS_NAME = amazed_bonus
 bonus:	all
 		@make -C ./bonus
 
+bonus_re : bonus
+		@make re -C ./bonus
+
 bonus_run :
 		./$(NAME)
 		./$(BONUS_NAME)

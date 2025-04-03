@@ -27,3 +27,10 @@ rooms_t *rooms_info(void)
 
     return &rooms_info;
 }
+
+bots_t *bots_info(void)
+{
+    static bots_t bots_info;
+
+    return &bots_info;
+}

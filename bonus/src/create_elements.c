@@ -115,7 +115,7 @@ static void fill_rooms(void)
     fclose(file);
 }
 
-static void find_position(void)
+static void change_position(void)
 {
     rooms_list_t *current = rooms_info()->head;
     float min_x = INFINITY, max_x = -INFINITY;
@@ -176,13 +176,50 @@ static void create_rect_for_rooms(void)
     }
 }
 
-void create_elements(void)
+static void fill_bots(void)
+{
+    bots_info()->head = NULL;
+    int bots_nbr = maze_info()->robot_nbr;
+    rooms_list_t *start_room = rooms_info()->head;
+    while (start_room != NULL && !start_room->is_start) {
+        start_room = start_room->next;
+    }
+    if (!start_room) {
+        return;
+    }
+    for (int i = 0; i < bots_nbr; i++) {
+        bots_list_t *new_bot = malloc(sizeof(bots_list_t));
+        if (!new_bot) {
+            return;
+        }
+        new_bot->rect = sfRectangleShape_create();
+        sfRectangleShape_setSize(new_bot->rect, (sfVector2f){30, 30});
+        sfRectangleShape_setFillColor(new_bot->rect, sfColor_fromRGB(255, 255, 0));
+        sfRectangleShape_setOrigin(new_bot->rect, (sfVector2f){15, 15});
+        new_bot->text = sfText_create();
+        sfText_setCharacterSize(new_bot->text, 15);
+        sfText_setFillColor(new_bot->text, sfWhite);
+        sfText_setString(new_bot->text, my_itoa(i + 1));
+        sfText_setOrigin(new_bot->text, (sfVector2f){15, 15});
+        new_bot->name = i + 1;
+        new_bot->pos = start_room->pos;
+        new_bot->speed = (sfVector2f){0, 0};
+        new_bot->direction = (sfVector2f){0, 0};
+        sfRectangleShape_setPosition(new_bot->rect, new_bot->pos);
+        sfText_setPosition(new_bot->text, (sfVector2f){new_bot->pos.x + 10, new_bot->pos.y + 10});
+        new_bot->next = bots_info()->head;
+        bots_info()->head = new_bot;
+    }
+}
+
+void create_elements()
 {
     fill_moves();
     fill_nbr();
     fill_tunnels();
     fill_rooms();
     create_rect_for_rooms();
-    find_position();
+    change_position();
+    fill_bots();
     return;
 }

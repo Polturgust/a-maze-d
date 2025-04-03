@@ -12,6 +12,7 @@ SRCS    =	src/amazed_graph.c \
 			src/create_elements.c \
 			src/draw_elements.c \
 			src/singletons.c \
+			src/move_bots.c \
 \
 			src/resources/my_stwa.c \
 			src/resources/my_itoa.c \

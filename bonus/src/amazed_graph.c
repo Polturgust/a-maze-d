@@ -21,6 +21,8 @@ static void while_window_open(void)
         if (sfTime_asMilliseconds(sfClock_getElapsedTime(fps)) >= 1000 / 30) {
             sfRenderWindow_clear(game_info()->window, sfBlack);
             handle_events();
+            find_bot_directions();
+            move_bots();
             draw_elements();
             sfRenderWindow_display(game_info()->window);
             sfClock_restart(fps);
