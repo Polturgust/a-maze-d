@@ -7,11 +7,11 @@
 
 NAME    =       amazed
 
-SRCS    =	amazed_graph.c \
-			handle_events.c \
-			create_elements.c \
-			draw_elements.c \
-			singletons.c \
+SRCS    =	src/amazed_graph.c \
+			src/handle_events.c \
+			src/create_elements.c \
+			src/draw_elements.c \
+			src/singletons.c \
 
 OBJ	=	$(MAIN:.c=.o) $(SRCS:.c=.o)
 

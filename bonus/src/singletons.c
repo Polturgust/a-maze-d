@@ -5,7 +5,7 @@
 ** singletons.c
 */
 
-#include "graph.h"
+#include "../include/graph.h"
 
 game_t *game_info(void)
 {

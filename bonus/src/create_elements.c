@@ -5,7 +5,7 @@
 ** create_elements.c
 */
 
-#include "graph.h"
+#include "../include/graph.h"
 
 void create_elements(void)
 {

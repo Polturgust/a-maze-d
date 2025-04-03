@@ -5,7 +5,7 @@
 ** amazed_graph.c
 */
 
-#include "graph.h"
+#include "../include/graph.h"
 
 static void destroy_all(void)
 {

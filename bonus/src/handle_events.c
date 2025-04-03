@@ -5,7 +5,7 @@
 ** handle_events.c
 */
 
-#include "graph.h"
+#include "../include/graph.h"
 
 static void close_window(void)
 {
