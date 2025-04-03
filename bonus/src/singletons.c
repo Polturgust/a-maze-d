@@ -14,9 +14,16 @@ game_t *game_info(void)
     return &game_info;
 }
 
-moves_t *moves_info(void)
+maze_t *maze_info(void)
 {
-    static moves_t moves_info;
+    static maze_t maze_info;
 
-    return &moves_info;
+    return &maze_info;
+}
+
+rooms_t *rooms_info(void)
+{
+    static rooms_t rooms_info;
+
+    return &rooms_info;
 }
