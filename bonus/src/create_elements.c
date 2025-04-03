@@ -115,12 +115,74 @@ static void fill_rooms(void)
     fclose(file);
 }
 
+static void find_position(void)
+{
+    rooms_list_t *current = rooms_info()->head;
+    float min_x = INFINITY, max_x = -INFINITY;
+    float min_y = INFINITY, max_y = -INFINITY;
+    const float screen_margin = 50;
+    const float screen_width = 1920;
+    const float screen_height = 1080;
+    const float available_width = screen_width - 2 * screen_margin;
+    const float available_height = screen_height - 2 * screen_margin;
+    while (current != NULL) {
+        if (current->pos.x < min_x) min_x = current->pos.x;
+        if (current->pos.x > max_x) max_x = current->pos.x;
+        if (current->pos.y < min_y) min_y = current->pos.y;
+        if (current->pos.y > max_y) max_y = current->pos.y;
+        current = current->next;
+    }
+    float x_scale = (max_x == min_x) ? 0 : (available_width / (max_x - min_x));
+    float y_scale = (max_y == min_y) ? 0 : (available_height / (max_y - min_y));
+    current = rooms_info()->head;
+    while (current != NULL) {
+        if (max_x != min_x)
+            current->pos.x = screen_margin + (current->pos.x - min_x) * x_scale;
+        else
+            current->pos.x = screen_width / 2;
+        if (max_y != min_y)
+            current->pos.y = screen_margin + (current->pos.y - min_y) * y_scale;
+        else
+            current->pos.y = screen_height / 2;
+        sfRectangleShape_setPosition(current->rect, current->pos);
+        sfText_setPosition(current->text, (sfVector2f){current->pos.x + 10, current->pos.y + 10});
+        current = current->next;
+    }
+}
+
+static void create_rect_for_rooms(void)
+{
+    rooms_list_t *current = rooms_info()->head;
+    sfFont *font = sfFont_createFromFile("./bonus/src/resources/fonts/ARCADE_N.TTF");
+
+    while (current != NULL) {
+        current->rect = sfRectangleShape_create();
+        sfRectangleShape_setSize(current->rect, (sfVector2f){50, 50});
+        sfRectangleShape_setFillColor(current->rect, sfColor_fromRGB(255, 0, 0));
+        current->text = sfText_create();
+        sfRectangleShape_setOrigin(current->rect, (sfVector2f){25, 25});
+        sfText_setFont(current->text, font);
+        sfText_setCharacterSize(current->text, 20);
+        sfText_setFillColor(current->text, sfWhite);
+        sfText_setString(current->text, my_itoa(current->name));
+        sfText_setOrigin(current->text, (sfVector2f){25, 25});
+        if (current->is_start) {
+            sfRectangleShape_setFillColor(current->rect, sfColor_fromRGB(0, 255, 0));
+        }
+        if (current->is_end) {
+            sfRectangleShape_setFillColor(current->rect, sfColor_fromRGB(0, 0, 255));
+        }
+        current = current->next;
+    }
+}
+
 void create_elements(void)
 {
     fill_moves();
     fill_nbr();
     fill_tunnels();
     fill_rooms();
-    test_all();
+    create_rect_for_rooms();
+    find_position();
     return;
 }

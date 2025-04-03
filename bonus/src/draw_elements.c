@@ -9,5 +9,11 @@
 
 void draw_elements(void)
 {
-    return;
+    rooms_list_t *current = rooms_info()->head;
+
+    while (current != NULL) {
+        sfRenderWindow_drawRectangleShape(game_info()->window, current->rect, NULL);
+        sfRenderWindow_drawText(game_info()->window, current->text, NULL);
+        current = current->next;
+    }
 }

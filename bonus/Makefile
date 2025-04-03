@@ -14,6 +14,7 @@ SRCS    =	src/amazed_graph.c \
 			src/singletons.c \
 \
 			src/resources/my_stwa.c \
+			src/resources/my_itoa.c \
 
 OBJ	=	$(MAIN:.c=.o) $(SRCS:.c=.o)
 

@@ -20,6 +20,7 @@
     #include <sys/stat.h>
     #include <stdbool.h>
     #include <string.h>
+    #include <float.h>
 
 typedef struct game_s {
     sfRenderWindow *window;
@@ -33,6 +34,8 @@ typedef struct maze_s {
 } maze_t;
 
 typedef struct rooms_list_s {
+    sfRectangleShape *rect;
+    sfText *text;
     int name;
     sfVector2f pos;
     bool is_start;
@@ -56,5 +59,6 @@ rooms_t *rooms_info(void);
 
 //resources:
 char **my_stwa(char *input_str, char delimiter);
+char *my_itoa(int num);
 
 #endif /* !WORLD_H_ */
