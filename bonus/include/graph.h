@@ -53,7 +53,8 @@ typedef struct bots_list_s {
     int name;
     sfVector2f pos;
     sfVector2f speed;
-    sfVector2f direction;
+    sfVector2f move_vector;
+    sfVector2f target_pos;
     struct bots_list_s *next;
 } bots_list_t;
 

@@ -204,7 +204,7 @@ static void fill_bots(void)
         new_bot->name = i + 1;
         new_bot->pos = start_room->pos;
         new_bot->speed = (sfVector2f){0, 0};
-        new_bot->direction = (sfVector2f){0, 0};
+        new_bot->move_vector = (sfVector2f){0, 0};
         sfRectangleShape_setPosition(new_bot->rect, new_bot->pos);
         sfText_setPosition(new_bot->text, (sfVector2f){new_bot->pos.x + 10, new_bot->pos.y + 10});
         new_bot->next = bots_info()->head;

@@ -15,13 +15,14 @@ static void destroy_all(void)
 static void while_window_open(void)
 {
     sfClock *fps = sfClock_create();
+    float time_elapsed = 0;
 
     sfClock_restart(fps);
     while (sfRenderWindow_isOpen(game_info()->window)) {
-        if (sfTime_asMilliseconds(sfClock_getElapsedTime(fps)) >= 1000 / 30) {
+        time_elapsed = sfTime_asMilliseconds(sfClock_getElapsedTime(fps));
+        if (time_elapsed >= 1000 / 30) {
             sfRenderWindow_clear(game_info()->window, sfBlack);
             handle_events();
-            find_bot_directions();
             move_bots();
             draw_elements();
             sfRenderWindow_display(game_info()->window);
