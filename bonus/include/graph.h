@@ -34,7 +34,7 @@ typedef struct maze_s {
 } maze_t;
 
 typedef struct rooms_list_s {
-    sfRectangleShape *rect;
+    sfCircleShape *circle;
     sfText *text;
     int name;
     sfVector2f pos;

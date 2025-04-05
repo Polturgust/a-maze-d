@@ -1,3 +1,10 @@
+/*
+** EPITECH PROJECT, 2024
+** amazed
+** File description:
+** move_bots.c
+*/
+
 #include "../include/graph.h"
 
 typedef struct movement_state_s {
@@ -5,12 +12,13 @@ typedef struct movement_state_s {
     bool processing_moves;
     bool initialized_movement;
     float base_speed;
+    sfClock* pause_clock;
+    bool in_pause;
 } movement_state_t;
 
 static bool has_ended(movement_state_t *state)
 {
-    return (maze_info()->moves == NULL || 
-            maze_info()->moves[state->current_move_set] == NULL);
+    return (maze_info()->moves == NULL || maze_info()->moves[state->current_move_set] == NULL);
 }
 
 static sfVector2f get_direction_and_distance(sfVector2f pos1, sfVector2f pos2, float *distance)
@@ -36,7 +44,6 @@ static void reset_movement(bots_list_t *bot)
 static void set_targets_and_speed(bots_list_t *bot, int bot_id, int room_id, float base_speed)
 {
     rooms_list_t *room = rooms_info()->head;
-
     while (bot) {
         if (bot->name == bot_id) {
             while (room) {
@@ -60,7 +67,6 @@ static bool check_arrival(movement_state_t *state)
 {
     bool all_bots_arrived = true;
     bots_list_t *bot = bots_info()->head;
-
     while (bot) {
         if (state->initialized_movement) {
             float dx = bot->target_pos.x - bot->pos.x;
@@ -84,6 +90,13 @@ static void calculate_bot_pos(movement_state_t *state)
 {
     if (!maze_info() || !maze_info()->moves || !bots_info() || !rooms_info() || has_ended(state))
         return;
+    if (state->in_pause) {
+        if (sfTime_asSeconds(sfClock_getElapsedTime(state->pause_clock)) >= 0.2f) {
+            state->in_pause = false;
+            sfClock_restart(state->pause_clock);
+        }
+        return;
+    }
     if (!state->processing_moves) {
         char **current_moves = maze_info()->moves[state->current_move_set];
         reset_movement(bots_info()->head);
@@ -97,11 +110,14 @@ static void calculate_bot_pos(movement_state_t *state)
         state->processing_moves = true;
         state->initialized_movement = true;
     }
+
     if (check_arrival(state)) {
         state->processing_moves = false;
         state->initialized_movement = false;
         if (!has_ended(state)) {
             state->current_move_set++;
+            state->in_pause = true;
+            sfClock_restart(state->pause_clock);
         }
     }
 }
@@ -122,6 +138,9 @@ static void update_bots(void)
 void move_bots(void)
 {
     static movement_state_t state = {0};
+    if (!state.pause_clock) {
+        state.pause_clock = sfClock_create();
+    }
     calculate_bot_pos(&state);
     update_bots();
 }
