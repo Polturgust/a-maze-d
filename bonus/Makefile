@@ -13,13 +13,16 @@ SRCS    =	src/amazed_graph.c \
 			src/draw_elements.c \
 			src/singletons.c \
 			src/move_bots.c \
+			src/calculate_bot_pos.c \
+			src/fill_elements.c \
 \
 			src/resources/my_stwa.c \
 			src/resources/my_itoa.c \
 
 OBJ	=	$(MAIN:.c=.o) $(SRCS:.c=.o)
 
-CFLAGS	=	 -Wextra -Wall -I./includes -lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio -lm
+CFLAGS	=	 -Wextra -Wall -I./includes -lcsfml-graphics \
+			-lcsfml-window -lcsfml-system -lcsfml-audio -lm
 
 CC	=	gcc
 
@@ -35,4 +38,3 @@ fclean	:	clean
 			rm -rf $(NAME)
 
 re	:	fclean all
-

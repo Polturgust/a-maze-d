@@ -16,14 +16,15 @@ static void close_window(void)
         sfRenderWindow_close(game_info()->window);
 }
 
-static void handle_mouse_click()
+static void handle_mouse_click(void)
 {
     return;
 }
 
 void handle_events(void)
 {
-    while (sfRenderWindow_pollEvent(game_info()->window, &game_info()->event)) {
+    while (sfRenderWindow_pollEvent(
+        game_info()->window, &game_info()->event)) {
         if (game_info()->event.type == sfEvtMouseButtonPressed)
             handle_mouse_click();
         close_window();

@@ -49,7 +49,6 @@ typedef struct rooms_s {
 
 typedef struct bots_list_s {
     sfRectangleShape *rect;
-    sfText *text;
     int name;
     sfVector2f pos;
     sfVector2f speed;
@@ -62,11 +61,22 @@ typedef struct bots_s {
     bots_list_t *head;
 } bots_t;
 
+typedef struct movement_state_s {
+    int current_move_set;
+    bool processing_moves;
+    bool initialized_movement;
+    float base_speed;
+    sfClock* pause_clock;
+    bool in_pause;
+} movement_state_t;
+
 //functions:
 void draw_elements(void);
 void create_elements(void);
 void handle_events(void);
 void move_bots(void);
+void calculate_bot_pos(movement_state_t *state);
+void fill_elements(void);
 
 //singletons:
 game_t *game_info(void);

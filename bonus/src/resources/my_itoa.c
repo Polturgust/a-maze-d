@@ -24,7 +24,8 @@ char *my_itoa(int num)
         return NULL;
     str[len] = '\0';
     while (num != 0) {
-        str[--len] = (num % 10) + '0';
+        len--;
+        str[len] = (num % 10) + '0';
         num /= 10;
     }
     return str;
