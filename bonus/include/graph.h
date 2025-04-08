@@ -68,6 +68,7 @@ typedef struct movement_state_s {
     float base_speed;
     sfClock* pause_clock;
     bool in_pause;
+    bool in_hard_pause;
 } movement_state_t;
 
 //functions:
@@ -83,6 +84,7 @@ game_t *game_info(void);
 maze_t *maze_info(void);
 rooms_t *rooms_info(void);
 bots_t *bots_info(void);
+movement_state_t *state_info(void);
 
 //resources:
 char **my_stwa(char *input_str, char delimiter);

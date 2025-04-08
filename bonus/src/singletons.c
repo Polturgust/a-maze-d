@@ -34,3 +34,13 @@ bots_t *bots_info(void)
 
     return &bots_info;
 }
+
+movement_state_t *state_info(void)
+{
+    static movement_state_t state_info = {0};
+
+    if (!state_info.pause_clock) {
+        state_info.pause_clock = sfClock_create();
+    }
+    return &state_info;
+}

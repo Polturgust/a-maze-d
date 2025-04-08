@@ -134,8 +134,14 @@ static void create_bots(void)
     }
 }
 
+static void init_random_values(void)
+{
+    state_info()->in_hard_pause = false;
+}
+
 void create_elements(void)
 {
+    init_random_values();
     fill_elements();
     create_circle_for_rooms();
     change_position();

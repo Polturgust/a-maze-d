@@ -22,11 +22,6 @@ static void update_bots(void)
 
 void move_bots(void)
 {
-    static movement_state_t state = {0};
-
-    if (!state.pause_clock) {
-        state.pause_clock = sfClock_create();
-    }
-    calculate_bot_pos(&state);
+    calculate_bot_pos(state_info());
     update_bots();
 }
