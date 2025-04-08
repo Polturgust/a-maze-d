@@ -4,3 +4,5 @@ amazed
 *.gcno
 laby_gen.pl
 lab_15-20.txt
+*.a
+B-CPE-200_Amazed_binaries.zip

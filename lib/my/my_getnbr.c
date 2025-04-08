@@ -22,5 +22,5 @@ int my_getnbr(char const *str)
     res = res * signe;
     if (res > 2147483647 || res < -2147483648)
         return 0;
-    return (res);
+    return (int)res;
 }

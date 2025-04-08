@@ -25,6 +25,8 @@ typedef struct inf_frmt {
     char tab_inf[3][255];
     char ind_conv;
 } inf_frmt_t;
+char **get_stdin_file(void);
+char *my_itoa(int nb);
 char *get_file(char *path);
 char *str_dupby(char *str, char *by, int less);
 unsigned int size_wrd(char *str, int forward, char *separ);

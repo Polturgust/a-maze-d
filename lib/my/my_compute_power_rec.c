@@ -10,12 +10,11 @@
 unsigned long long my_compute_power_rec(int nb, int p)
 {
     if (p == 0)
-        return 0;
-    if (p == 1){
         return 1;
-    } else {
-        return (my_compute_power_rec(nb, p - 1) * p);
-    }
+    if (p == 1)
+        return nb;
+    else
+        return my_compute_power_rec(nb, p - 1) * nb;
 }
 
 int get_power(unsigned int nb, int base)

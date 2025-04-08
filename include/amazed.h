@@ -25,18 +25,12 @@
 ///////////////////
 typedef struct graph_s {
     int **mat;
+    int *name;
     int nb_node;
+    int nb_robots;
+    int first;
+    int last;
 } graph_t;
-
-/*
-** node structure (only for graphique)
-*/
-typedef struct node_s {
-    int number;
-    int pos[2];
-    bool is_start;
-    bool is_end;
-} node_t;
 
 /*
 ** pathing
@@ -47,6 +41,12 @@ typedef struct node_s {
 // else it return null
 //
 ///////////////////
-graph_t *parth(linked_list_t **node_list);
+graph_t *pars(void);
+void writer(int fd, char *str);
+int init(char **file, graph_t *graph);
+void del_graph(graph_t *graph);
+int add_strart_end(char **file, int *nb, graph_t *graph, int fd_room);
+int add_node(char *line, graph_t *graph, int fd);
+int add_way(char *line, graph_t *graph, int fd);
 
 #endif /* amazed.h */
