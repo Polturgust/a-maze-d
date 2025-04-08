@@ -25,9 +25,11 @@ int main(int argc, char **argv)
 
     if (error != 1)
         return error;
-    info_graph = pars(&node_list);
+    info_graph = pars();
     if (!info_graph)
         return 84;
+    printf("caca\n");
+    call_dfs(info_graph);
     del_graph(info_graph);
     return 0;
 }
