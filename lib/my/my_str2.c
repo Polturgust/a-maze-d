@@ -7,6 +7,17 @@
 
 #include "my.h"
 
+char *my_itoa(int nb)
+{
+    int p = get_power(nb, 10);
+    char *res = malloc(sizeof(char) * (p + 1));
+
+    res[p] = '\0';
+    for (int i = 0; i < p; i++)
+        res[i] = ((nb / my_compute_power_rec(10, p - i - 1)) % 10) + 48;
+    return res;
+}
+
 char *str_dupby(char *str, char *by, int less)
 {
     char *dest;

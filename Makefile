@@ -5,7 +5,10 @@
 ## f
 ##
 
-SRC =	src/parthing.c \
+SRC =	src/pars/parsing.c \
+		src/pars/init.c \
+		src/pars/add.c \
+		src/del.c \
 
 MAIN =	src/main.c \
 

@@ -20,14 +20,14 @@ static int is_good_arg(int argc, char **argv)
 
 int main(int argc, char **argv)
 {
-    linked_list_t *node_list = NULL;
     graph_t *info_graph = NULL;
     int error = is_good_arg(argc, argv);
 
     if (error != 1)
         return error;
-    info_graph = parth(&node_list);
+    info_graph = pars();
     if (!info_graph)
         return 84;
+    del_graph(info_graph);
     return 0;
 }
