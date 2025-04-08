@@ -132,11 +132,8 @@ void calculate_bot_pos(movement_state_t *state)
 {
     char **current_moves;
 
-    if (state->in_hard_pause) {
-        return;
-    }
     if (!maze_info() || !maze_info()->moves || !bots_info() ||
-    !rooms_info() || has_ended(state))
+    !rooms_info() || has_ended(state) || state->in_hard_pause)
         return;
     if (state->in_pause) {
         if (sfTime_asSeconds(

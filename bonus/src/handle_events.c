@@ -21,12 +21,11 @@ static void handle_mouse_click(void)
     return;
 }
 
-static void handle_key_press()
+static void handle_key_press(void)
 {
     if (game_info()->event.type == sfEvtKeyPressed &&
         game_info()->event.key.code == sfKeySpace) {
             state_info()->in_hard_pause = !state_info()->in_hard_pause;
-            printf("%i\n", state_info()->in_hard_pause);
     }
 }
 

@@ -93,12 +93,23 @@ static void create_circle_for_rooms(void)
     }
 }
 
+static void set_bot_features(
+    bots_list_t *new_bot, rooms_list_t *start_room, int i)
+{
+    new_bot->name = i + 1;
+    new_bot->pos = start_room->pos;
+    new_bot->speed = (sfVector2f){0, 0};
+    new_bot->move_vector = (sfVector2f){0, 0};
+    sfRectangleShape_setPosition(new_bot->rect, new_bot->pos);
+    new_bot->next = bots_info()->head;
+}
+
 static void create_rect_for_bots(const float bot_size,
     rooms_list_t *start_room, int i)
 {
     bots_list_t *new_bot;
     sfTexture *bot_texture = sfTexture_createFromFile(
-        "./bonus/src/resources/images/bot1.png", NULL);
+        "./bonus/src/resources/images/bot.png", NULL);
 
     new_bot = malloc(sizeof(bots_list_t));
     if (!new_bot || !bot_texture)
@@ -106,15 +117,12 @@ static void create_rect_for_bots(const float bot_size,
     new_bot->rect = sfRectangleShape_create();
     sfRectangleShape_setSize(new_bot->rect,
         (sfVector2f){bot_size, bot_size});
-    sfRectangleShape_setTexture(new_bot->rect, bot_texture, sfTrue);
+        sfRectangleShape_setTexture(new_bot->rect, bot_texture, sfTrue);
+        sfRectangleShape_setTextureRect(new_bot->rect,
+            (sfIntRect){0, 0, 11, 9});
     sfRectangleShape_setOrigin(new_bot->rect,
         (sfVector2f){bot_size / 2, bot_size / 2});
-    new_bot->name = i + 1;
-    new_bot->pos = start_room->pos;
-    new_bot->speed = (sfVector2f){0, 0};
-    new_bot->move_vector = (sfVector2f){0, 0};
-    sfRectangleShape_setPosition(new_bot->rect, new_bot->pos);
-    new_bot->next = bots_info()->head;
+    set_bot_features(new_bot, start_room, i);
     bots_info()->head = new_bot;
 }
 
