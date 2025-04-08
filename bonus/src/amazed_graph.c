@@ -33,12 +33,14 @@ static void while_window_open(void)
     sfClock_destroy(fps);
 }
 
-static int check_other_files(FILE *file, char line[256])
+static int check_other_files(void)
 {
-    file = fopen("./bonus/tunnels.txt", "r");
+    FILE *file = fopen("./bonus/tunnels.txt", "r");
+    char line[256];
+
     if (!file)
         return 84;
-    if (strcmp(fgets(line, sizeof(line), file), "error\n") == 0) {
+    if (fgets(line, sizeof(line), file) == NULL || strcmp(line, "error\n") == 0) {
         fclose(file);
         return 84;
     }
@@ -46,7 +48,7 @@ static int check_other_files(FILE *file, char line[256])
     file = fopen("./bonus/robot_nbr.txt", "r");
     if (!file)
         return 84;
-    if (strcmp(fgets(line, sizeof(line), file), "error\n") == 0) {
+    if (fgets(line, sizeof(line), file) == NULL || strcmp(line, "error\n") == 0) {
         fclose(file);
         return 84;
     }
@@ -61,7 +63,7 @@ static int check_files(void)
 
     if (!file)
         return 84;
-    if (strcmp(fgets(line, sizeof(line), file), "error\n") == 0) {
+    if (fgets(line, sizeof(line), file) == NULL || strcmp(line, "error\n") == 0) {
         fclose(file);
         return 84;
     }
@@ -69,12 +71,12 @@ static int check_files(void)
     file = fopen("./bonus/rooms.txt", "r");
     if (!file)
         return 84;
-    if (strcmp(fgets(line, sizeof(line), file), "error\n") == 0) {
+    if (fgets(line, sizeof(line), file) == NULL || strcmp(line, "error\n") == 0) {
         fclose(file);
         return 84;
     }
     fclose(file);
-    check_other_files(file, line);
+    return check_other_files();
 }
 
 int main(void)
