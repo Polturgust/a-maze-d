@@ -26,7 +26,6 @@ int test_line(char *line, int *nb)
 
 graph_t *parth(linked_list_t **node_list)
 {
-    int **mat = NULL;
     char *input;
     int error = 0;
     graph_t *graph = malloc(sizeof(graph_t));
@@ -39,7 +38,7 @@ graph_t *parth(linked_list_t **node_list)
         if (error)
             break;
     }
-    del(mat, input, error);
+    del(graph, input, error);
     (void)node_list;
     return graph;
 }

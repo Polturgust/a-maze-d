@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 
     if (error != 1)
         return error;
-    info_graph = parth(&node_list);
+    info_graph = pars(&node_list);
     if (!info_graph)
         return 84;
     return 0;
