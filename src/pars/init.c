@@ -57,19 +57,10 @@ static int set_mat(graph_t *graph)
     return 0;
 }
 
-static int set_nb_robot(char *line)
-{
-    char *n_line = my_strndup(line, my_strlen(line) - 1);
-    int n = my_getnbr(n_line);
-
-    free(n_line);
-    return n;
-}
-
 int init(char **file, graph_t *graph)
 {
     int fd_r = open("bonus/robot_nbr.txt", O_WRONLY | O_TRUNC | O_CREAT, 0644);
-    int nb_robot = set_nb_robot(file[0]);
+    int nb_robot = my_getnbr(file[0]);
 
     if ((nb_robot == 0 && file[0][0] != 0) || nb_robot < 0)
         return write_error_fd(fd_r);

@@ -12,8 +12,8 @@ static graph_t *del(graph_t *graph, char **file, int error, int fd)
     destroy_array((void **)file);
     if (fd != -1)
         close(fd);
-    if (error == 0 && (graph->first == -1 || graph->last == -1))
-        my_puterror_str("amazed: no start or not end\n");
+    if (!graph)
+        return NULL;
     if (error || graph->first == -1 || graph->last == -1) {
         fd = open("bonus/rooms.txt", O_WRONLY | O_TRUNC | O_CREAT, 0644);
         if (fd != -1) {
