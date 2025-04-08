@@ -7,11 +7,6 @@
 
 #include "../include/graph.h"
 
-static void destroy_all(void)
-{
-    return;
-}
-
 static int check_other_files(void)
 {
     FILE *file = fopen("./bonus/tunnels.txt", "r");

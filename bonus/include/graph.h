@@ -78,6 +78,7 @@ void handle_events(void);
 void move_bots(void);
 void calculate_bot_pos(movement_state_t *state);
 void fill_elements(void);
+void destroy_all(void);
 
 //singletons:
 game_t *game_info(void);
