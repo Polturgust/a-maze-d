@@ -25,7 +25,7 @@ int main(int argc, char **argv)
 
     if (error != 1)
         return error;
-    info_graph = pars();
+    info_graph = pars(&node_list);
     if (!info_graph)
         return 84;
     del_graph(info_graph);
