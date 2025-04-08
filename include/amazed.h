@@ -32,6 +32,13 @@ typedef struct graph_s {
     int last;
 } graph_t;
 
+typedef struct room_s {
+    int name;
+    int cost;
+    int waiting;
+    char is_visited;
+} room_t;
+
 /*
 ** pathing
 */
@@ -41,6 +48,8 @@ typedef struct graph_s {
 // else it return null
 //
 ///////////////////
+char call_dfs(graph_t *graph);
+int dfs(graph_t *graph, room_t **rooms, int idc);
 graph_t *pars(void);
 void writer(int fd, char *str);
 int init(char **file, graph_t *graph);

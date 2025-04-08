@@ -6,14 +6,6 @@
 */
 
 #include "../../include/amazed.h"
-#include <stdlib.h>
-
-typedef struct room_s {
-    int name;
-    int cost;
-    int waiting;
-    char is_visited;
-} room_t;
 
 int get_idc_start(graph_t *graph)
 {
@@ -21,7 +13,7 @@ int get_idc_start(graph_t *graph)
 
     for (int i = 0; i < graph->nb_node; i++){
         if (graph->name[i] == start)
-            return i;
+           return i;
     }
     return -1;
 }
@@ -59,6 +51,9 @@ char call_dfs(graph_t *graph)
         rooms[i]->cost = -1;
         rooms[i]->is_visited = 0;
     }
+    rooms[graph->nb_node] = NULL;
     dfs(graph, rooms, get_idc_start(graph));
+    for (int i = 0; rooms[i]; i++)
+        printf("rooms [name: %i\ncost: %i\nis_visited: %i]\n",rooms[i]->name, rooms[i]->cost, rooms[i]->is_visited);
     return 0;
 }

@@ -9,6 +9,7 @@ SRC =	src/pars/parsing.c \
 		src/pars/init.c \
 		src/pars/add.c \
 		src/del.c \
+		src/algo/dfs.c \
 
 MAIN =	src/main.c \
 
