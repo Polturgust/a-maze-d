@@ -68,5 +68,6 @@ int add_way(char *line, graph_t *graph, int fd)
     if (i == j)
         return 0;
     graph->mat[id_i][id_j] = 1;
+    graph->mat[id_j][id_i] = 1;
     return 0;
 }
