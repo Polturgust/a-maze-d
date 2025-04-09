@@ -37,8 +37,13 @@ typedef struct room_s {
     int cost;
     int waiting;
     char is_visited;
+    char is_occuped;
 } room_t;
 
+typedef struct robot_s {
+    int id;
+    int pos;
+} robot_t;
 /*
 ** pathing
 */

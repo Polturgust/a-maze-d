@@ -1,0 +1,632 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "my_put_uint.o",
+      "my_put_uint.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_put_uint.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_put_uint.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "my_putchar.o",
+      "my_putchar.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_putchar.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_putchar.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "my_put_nbr.o",
+      "my_put_nbr.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_put_nbr.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_put_nbr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "put_sce.o",
+      "put_sce.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/put_sce.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/put_sce.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "my_getnbr.o",
+      "my_getnbr.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_getnbr.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_getnbr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "my_strlen.o",
+      "my_strlen.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_strlen.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_strlen.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "my_compute_power_rec.o",
+      "my_compute_power_rec.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_compute_power_rec.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_compute_power_rec.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "put_nbr_base.o",
+      "put_nbr_base.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/put_nbr_base.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/put_nbr_base.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "put_nbr_hex.o",
+      "put_nbr_hex.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/put_nbr_hex.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/put_nbr_hex.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "my_printf.o",
+      "my_printf.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_printf.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_printf.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_c.o",
+      "flag_c.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_c.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_s.o",
+      "flag_s.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_s.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_s.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_pr.o",
+      "flag_pr.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_pr.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_pr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_i_d.o",
+      "flag_i_d.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_i_d.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_i_d.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_n.o",
+      "flag_n.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_n.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_n.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_o.o",
+      "flag_o.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_o.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_o.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_e.o",
+      "flag_e.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_e.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_e.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_f.o",
+      "flag_f.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_f.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_f.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_u.o",
+      "flag_u.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_u.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_u.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_x.o",
+      "flag_x.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_x.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_x.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "my_put_float.o",
+      "my_put_float.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_put_float.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_put_float.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_g.o",
+      "flag_g.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_g.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_g.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "coma.o",
+      "coma.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/coma.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/coma.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_p.o",
+      "flag_p.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_p.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_p.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "take_pres.o",
+      "take_pres.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/take_pres.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/take_pres.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "my_putstr.o",
+      "my_putstr.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_putstr.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_putstr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "my_put_nstr.o",
+      "my_put_nstr.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_put_nstr.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_put_nstr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "my_put_nnbr.o",
+      "my_put_nnbr.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_put_nnbr.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_put_nnbr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_a.o",
+      "flag_a.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_a.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_a.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_amaj.o",
+      "flag_amaj.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_amaj.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_amaj.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "in.o",
+      "in.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/in.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/in.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "flag_char.o",
+      "flag_char.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_char.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/flag_char.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "recup_modul.o",
+      "recup_modul.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/recup_modul.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/recup_modul.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "str_is.o",
+      "str_is.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/str_is.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/str_is.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "is.o",
+      "is.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/is.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/is.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "is2.o",
+      "is2.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/is2.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/is2.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "is3.o",
+      "is3.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/is3.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/is3.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "my_str.o",
+      "my_str.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_str.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_str.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "my_str2.o",
+      "my_str2.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_str2.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/my_str2.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "error_output.o",
+      "error_output.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/error_output.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/error_output.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "word_array.o",
+      "word_array.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/word_array.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/word_array.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "str_merge.o",
+      "str_merge.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/str_merge.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/str_merge.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "file.o",
+      "file.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/file.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/my/file.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "src/link_list.o",
+      "src/link_list.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/lib_list",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/lib_list/src/link_list.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/lib_list/src/link_list.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-o",
+      "src/link_list2.o",
+      "src/link_list2.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/lib_list",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/lib_list/src/link_list2.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/lib/lib_list/src/link_list2.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "src/pars/parsing.o",
+      "src/pars/parsing.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/src/pars/parsing.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/src/pars/parsing.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "src/pars/init.o",
+      "src/pars/init.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/src/pars/init.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/src/pars/init.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "src/pars/add.o",
+      "src/pars/add.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/src/pars/add.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/src/pars/add.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "src/del.o",
+      "src/del.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/src/del.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/src/del.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "src/algo/dfs.o",
+      "src/algo/dfs.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/src/algo/dfs.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/src/algo/dfs.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-c",
+      "-o",
+      "src/main.o",
+      "src/main.c"
+    ],
+    "directory": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra",
+    "file": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/src/main.c",
+    "output": "/home/cannou/delivery/amazed/B-CPE-200-NCE-2-1-amazed-florent.serra/src/main.o"
+  }
+]
