@@ -1,10 +1,12 @@
 amazed
+amazed_bonus
 *.o
 *.gcda
 *.gcno
+*.a
 laby_gen.pl
 lab_15-20.txt
-*.a
 B-CPE-200_Amazed_binaries.zip
 *.txt
 vgcore*
+.vscode

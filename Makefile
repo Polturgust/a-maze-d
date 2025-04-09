@@ -34,7 +34,9 @@ clean:
 		@rm -fr *.gcda
 		@rm -fr $(TOBJ)
 
-fclean: clean fcleanlib
+
+
+fclean: clean fcleanlib fcleanbonus
 		@rm -rf $(NAME) $(TNAME)
 
 re: fclean all
@@ -64,3 +66,24 @@ u: unit_tests
 tests_run: unit_tests
 		@./unit_tests && gcovr
 t: tests_run
+
+BONUS_NAME = amazed_bonus
+
+bonus:	all
+		@make -C ./bonus
+
+bonus_re : bonus
+		@make re -C ./bonus
+
+bonus_help :
+		./$(BONUS_NAME) -h
+
+bonus_run_n_make : bonus
+		./$(NAME)
+		./$(BONUS_NAME)
+
+cleanbonus:
+		@make clean -C ./bonus
+
+fcleanbonus:
+		@make fclean -C ./bonus
