@@ -74,10 +74,37 @@ static void while_window_open(void)
     sfClock_destroy(fps);
 }
 
-int main(void)
+static int show_h(void)
+{
+    printf("\nBONUS USAGE:\n");
+    printf("To run the bonus version of amazed, use the following command:\n");
+    printf("./amazed < labyrinth_file | ./amazed_bonus\n");
+    return 1;
+}
+
+static int check_args(int argc, char **argv)
+{
+    if (argc > 2)
+        return 84;
+    if (argc == 2) {
+        if (strcmp(argv[1], "-h") == 0)
+            return show_h();
+        else
+            return 84;
+    }
+    return 0;
+}
+
+int main(int argc, char **argv)
 {
     sfVideoMode video_mode = {1920, 1080, 32};
+    int args_validity = check_args(argc, argv);
 
+    fill_files();
+    if (args_validity == 84)
+        return 84;
+    if (args_validity == 1)
+        return 0;
     if (check_files() == 84) {
         write(2, "There was a problem with base amazed.\n", 39);
         return 84;

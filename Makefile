@@ -71,9 +71,8 @@ bonus:	all
 bonus_re : bonus
 		@make re -C ./bonus
 
-bonus_run :
-		./$(NAME)
-		./$(BONUS_NAME)
+bonus_help :
+		./$(BONUS_NAME) -h
 
 bonus_run_n_make : bonus
 		./$(NAME)

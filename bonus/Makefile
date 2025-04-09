@@ -16,6 +16,7 @@ SRCS    =	src/amazed_graph.c \
 			src/calculate_bot_pos.c \
 			src/fill_elements.c \
 			src/destroy_all.c \
+			src/fill_files.c \
 \
 			src/resources/my_stwa.c \
 			src/resources/my_itoa.c \
