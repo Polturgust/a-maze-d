@@ -20,28 +20,30 @@ int get_idc_start(graph_t *graph)
 
 int dfs(graph_t *graph, room_t **rooms, int idc)
 {
-    int retval = -1;    
 
-    printf("room %i:\n", rooms[idc]->name);
+    //printf("room %i:\n", rooms[idc]->name);
     for (int i = 0; i < graph->nb_node; i++)
-        printf("%i", graph->mat[idc][i]);
-    printf("\n");
+        //printf("%i", graph->mat[idc][i]);
+    //printf("\n");
     if (rooms[idc]->name == graph->last){
         rooms[idc]->cost = 0;
-        return 1;
+        return 0;
     }
     rooms[idc]->is_visited = 1;
+    //printf("is visited\n");
     for (int i = 0; i < graph->nb_node; i++){
-        printf("bah je suis la frr\n");
         if (graph->mat[idc][i] == 0)
             continue;
-        printf("romms numero -> %i\n", rooms[i]->name);
         if (!rooms[i]->is_visited) {
-            rooms[i]->cost += 1 + dfs(graph, rooms, i);
-            retval = rooms[i]->cost;
+            //printf("romms numero -> %i\n", rooms[i]->name);
+            dfs(graph, rooms, i);    
+            if (rooms[idc]->cost == 0 || rooms[idc]->cost > rooms[i]->cost + 1){
+                rooms[idc]->cost = 0;
+                rooms[idc]->cost += 1 + rooms[i]->cost;
+            }
         }
     }
-    return retval;
+    return -1;
 }
 
 char call_dfs(graph_t *graph)
