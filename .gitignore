@@ -16,3 +16,7 @@ laby2
 laby_gen.pl.pl
 a.out
 settings.json
+moves.txt
+robot_nbr.txt
+tunnels.txt
+rooms.txt
