@@ -10,3 +10,9 @@ B-CPE-200_Amazed_binaries.zip
 *.txt
 vgcore*
 .vscode
+coding-style-reports.log
+laby
+laby2
+laby_gen.pl.pl
+a.out
+settings.json
