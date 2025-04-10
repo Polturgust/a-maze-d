@@ -22,7 +22,8 @@ void push_back(linked_list_t **list, void *data)
     linked_list_t *i = *list;
 
     if (*list == NULL){
-        write(STDERR_FILENO, "cannot push: the list is NULL\n", 30);
+        free(new_node);
+        push_front(list, data);
         return;
     }
     new_node->data = data;
