@@ -17,7 +17,7 @@ static int get_idn(int val, graph_t *graph)
     return -1;
 }
 
-int add_strart_end(char **file, int *nb, graph_t *graph, int fd_room)
+int add_strart_end(char **file, int *nb, graph_t *graph)
 {
     int i = 0;
     char **frag_line;
@@ -25,9 +25,9 @@ int add_strart_end(char **file, int *nb, graph_t *graph, int fd_room)
     if (my_strcmp(&file[*nb][2], "end") != 0 && my_strcmp(&file[*nb][2],
     "start") != 0)
         return 1;
-    writer(fd_room, file[*nb]);
+    writer(file[*nb]);
     (*nb) += 1;
-    writer(fd_room, file[*nb]);
+    writer(file[*nb]);
     frag_line = str_to_word_array(file[*nb], " ");
     if (my_arraylen(frag_line) != 3)
         return 1;
@@ -41,19 +41,19 @@ int add_strart_end(char **file, int *nb, graph_t *graph, int fd_room)
     return 0;
 }
 
-int add_node(char *line, graph_t *graph, int fd)
+int add_node(char *line, graph_t *graph)
 {
     int i = 0;
     char **frag_line = str_to_word_array(line, " ");
 
-    writer(fd, line);
+    writer(line);
     for (; graph->name[i] != -1; i++);
     graph->name[i] = my_getnbr(frag_line[0]);
     destroy_array((void **)frag_line);
     return 0;
 }
 
-int add_way(char *line, graph_t *graph, int fd)
+int add_way(char *line, graph_t *graph)
 {
     char **frag_line = str_to_word_array(line, "-");
     int i = my_getnbr(frag_line[0]);
@@ -61,10 +61,10 @@ int add_way(char *line, graph_t *graph, int fd)
     int id_i = get_idn(i, graph);
     int id_j = get_idn(j, graph);
 
+    writer(line);
     destroy_array((void **)frag_line);
     if (id_i == -1 || id_j == -1)
         return 1;
-    writer(fd, line);
     if (i == j)
         return 0;
     graph->mat[id_i][id_j] = 1;

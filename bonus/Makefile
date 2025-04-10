@@ -30,11 +30,11 @@ CC	=	gcc
 
 all	:	$(OBJ)
 		$(CC) $(OBJ) $(CFLAGS) -o $(NAME)
-		mv amazed_bonus ../amazed_bonus
+		mv $(NAME) ../$(NAME)
 
 clean	:
-			rm -rf $(OBJ)
-			rm ../amazed_bonus
+		rm -rf $(OBJ)
+		rm ../$(NAME)
 
 fclean	:	clean
 			rm -rf $(NAME)

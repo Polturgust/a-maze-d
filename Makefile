@@ -34,9 +34,7 @@ clean:
 		@rm -fr *.gcda
 		@rm -fr $(TOBJ)
 
-
-
-fclean: clean fcleanlib fcleanbonus
+fclean: clean fcleanlib
 		@rm -rf $(NAME) $(TNAME)
 
 re: fclean all
@@ -72,7 +70,7 @@ BONUS_NAME = amazed_bonus
 bonus:	all
 		@make -C ./bonus
 
-bonus_re : bonus
+bonus_re :
 		@make re -C ./bonus
 
 bonus_help :
