@@ -87,8 +87,11 @@ char call_dfs(graph_t *graph)
     if (!rooms)
         return 84;
     dfs(graph, rooms, get_idc_start(graph));
-    if (!check_path(rooms))
+    if (!check_path(rooms)){
+        write(2, "There is no path from beginning to end.\n", 40);
         return 84;
+    }
+    my_printf("#moves\n");
     robot_move(graph, rooms);
     for (int i = 0; rooms[i]; i++)
         free(rooms[i]);
