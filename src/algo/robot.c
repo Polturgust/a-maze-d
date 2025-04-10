@@ -43,24 +43,25 @@ int change_room(graph_t *graph, room_t **rooms, int idc_rooms, robot_t *robot)
     return retval;
 }
 
-int select_room(robot_t *robot, graph_t *graph, room_t **rooms)
+int select_room(robot_t *robot, graph_t *graph, room_t **room)
 {
     int idc_rooms = -1;
 
     if (graph->name[robot->pos] == graph->last)
         return 1;
-    rooms[robot->pos]->is_occuped = 0;
+    room[robot->pos]->is_occuped = 0;
     for (int i = 0; i < graph->nb_node; i++){
-        if (graph->mat[robot->pos][i] == 0 || rooms[i]->cost == -1)
+        if (graph->mat[robot->pos][i] == 0 || room[i]->cost == -1)
             continue;
         if (idc_rooms == -1){
             idc_rooms = i;
             continue;
         }
-        if (rooms[idc_rooms]->cost >= rooms[i]->cost + rooms[i]->is_occuped)
+        if (room[idc_rooms]->cost >= room[i]->cost + room[i]->is_occuped ||
+            (room[idc_rooms]->is_occuped && room[i]->cost < graph->nb_robots))
             idc_rooms = i;
     }
-    if (change_room(graph, rooms, idc_rooms, robot))
+    if (change_room(graph, room, idc_rooms, robot))
         return 0;
     return -1;
 }
