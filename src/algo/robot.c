@@ -29,14 +29,18 @@ linked_list_t *create_robot(graph_t *graph)
     return robot;
 }
 
-void change_room(graph_t *graph, room_t **rooms, int idc_rooms, robot_t *robot)
+int change_room(graph_t *graph, room_t **rooms, int idc_rooms, robot_t *robot)
 {
+    int retval = 0;
+
     if (!rooms[idc_rooms]->is_occuped){
         robot->pos = idc_rooms;
+        retval = 1;
         my_printf("P%i-%i ", robot->id, robot->pos);
     }
     if (graph->name[robot->pos] != graph->last)
         rooms[robot->pos]->is_occuped = 1;
+    return retval;
 }
 
 int select_room(robot_t *robot, graph_t *graph, room_t **rooms)
@@ -56,8 +60,22 @@ int select_room(robot_t *robot, graph_t *graph, room_t **rooms)
         if (rooms[idc_rooms]->cost >= rooms[i]->cost + rooms[i]->is_occuped)
             idc_rooms = i;
     }
-    change_room(graph, rooms, idc_rooms, robot);
-    return 0;
+    if (change_room(graph, rooms, idc_rooms, robot))
+        return 0;
+    return -1;
+}
+
+static void parcour_rob(graph_t *graph, room_t **rooms, linked_list_t *robot,
+    int *arrived)
+{
+    int verif = 0;
+
+        for (linked_list_t *i = robot; i; i = i->next){
+            verif = select_room((robot_t *)i->data, graph, rooms);
+            if (verif == -1)
+                break;
+            *arrived += verif;
+        }
 }
 
 void robot_move(graph_t *graph, room_t **room)
@@ -67,9 +85,7 @@ void robot_move(graph_t *graph, room_t **room)
 
     while (arrived != graph->nb_robots){
         arrived = 0;
-        for (linked_list_t *i = robot; i; i = i->next){
-            arrived += select_room((robot_t *)i->data, graph, room);
-        }
+        parcour_rob(graph, room, robot, &arrived);
         my_printf("\n");
     }
     while (robot){
