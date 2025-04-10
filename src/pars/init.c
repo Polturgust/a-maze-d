@@ -11,6 +11,7 @@ static int get_nb_node(char **file)
 {
     unsigned int acc = 0;
     char **line;
+    int size_line = 0;
 
     if (!file || my_arraylen(file) < 1)
         return 0;
@@ -18,13 +19,12 @@ static int get_nb_node(char **file)
         if (file[i][0] == '#')
             continue;
         line = str_to_word_array(file[i], " ");
-        if (my_arraylen(line) != 3)
-            break;
+        size_line  =my_arraylen(line);
         destroy_array((void **)line);
+        if (size_line != 3)
+            break;
         acc++;
     }
-    if (line)
-        destroy_array((void **)line);
     return acc;
 }
 
