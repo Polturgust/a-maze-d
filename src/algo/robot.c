@@ -87,7 +87,8 @@ void robot_move(graph_t *graph, room_t **room)
     while (arrived != graph->nb_robots){
         arrived = 0;
         parcour_rob(graph, room, robot, &arrived);
-        my_printf("\n");
+        if (arrived != graph->nb_robots)
+            my_printf("\n");
     }
     while (robot){
         free((robot_t *)pop_front(&robot));
