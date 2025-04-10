@@ -40,7 +40,7 @@ int dfs(graph_t *graph, room_t **rooms, int idc)
     if (rooms[idc]->cost == -2)
         rooms[idc]->cost = -1;
     for (int i = 0; i < graph->nb_node; i++){
-        if (graph->mat[idc][i] == 0 || rooms[i]->cost >= 0)
+        if (graph->mat[idc][i] == 0 || rooms[i]->cost > 0)
             continue;
         if (!rooms[i]->is_visited){
             dfs(graph, rooms, i);
