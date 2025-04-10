@@ -56,11 +56,11 @@ typedef struct robot_s {
 char call_dfs(graph_t *graph);
 int dfs(graph_t *graph, room_t **rooms, int idc);
 graph_t *pars(void);
-void writer(int fd, char *str);
+void writer(char *str);
 int init(char **file, graph_t *graph);
 void del_graph(graph_t *graph);
-int add_strart_end(char **file, int *nb, graph_t *graph, int fd_room);
-int add_node(char *line, graph_t *graph, int fd);
-int add_way(char *line, graph_t *graph, int fd);
+int add_strart_end(char **file, int *nb, graph_t *graph);
+int add_node(char *line, graph_t *graph);
+int add_way(char *line, graph_t *graph);
 
 #endif /* amazed.h */
