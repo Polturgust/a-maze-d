@@ -34,9 +34,7 @@ clean:
 		@rm -fr *.gcda
 		@rm -fr $(TOBJ)
 
-
-
-fclean: clean fcleanlib fcleanbonus
+fclean: clean fcleanlib
 		@rm -rf $(NAME) $(TNAME)
 
 re: fclean all
