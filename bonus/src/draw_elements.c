@@ -67,7 +67,7 @@ static void create_and_show_tunnels(void)
 {
     int room1;
     int room2;
-    const float thickness = 3;
+    const float thickness = 2;
     rooms_list_t *room_start = NULL;
     rooms_list_t *room_end = NULL;
     sfVector2f dir;

@@ -15,8 +15,10 @@ static void scale_and_position_rooms(
     const float av_height = 1080 - 2 * 100;
     float x_scale = (max_x == min_x) ? 0 : (av_width / (max_x - min_x));
     float y_scale = (max_y == min_y) ? 0 : (av_height / (max_y - min_y));
+    sfFloatRect bounds;
 
     while (current != NULL) {
+        bounds = sfText_getLocalBounds(current->text);
         if (max_x != min_x)
             current->pos.x = 100 + (current->pos.x - min_x) * x_scale;
         else
@@ -26,8 +28,8 @@ static void scale_and_position_rooms(
         else
             current->pos.y = 1080 / 2;
         sfCircleShape_setPosition(current->circle, current->pos);
-        sfText_setPosition(current->text,
-            (sfVector2f){current->pos.x + 10, current->pos.y + 10});
+        sfText_setPosition(current->text, (sfVector2f){current->pos.x - bounds.
+            width / 2, current->pos.y - bounds.height / 2});
         current = current->next;
     }
 }
@@ -53,6 +55,8 @@ static void change_position(void)
 static void set_circle_features(rooms_list_t *current,
     const float circle_radius, const int circle_point_count, sfFont *font)
 {
+    sfFloatRect bounds;
+
     current->circle = sfCircleShape_create();
     sfCircleShape_setRadius(current->circle, circle_radius);
     sfCircleShape_setPointCount(current->circle, circle_point_count);
@@ -66,9 +70,8 @@ static void set_circle_features(rooms_list_t *current,
     sfText_setCharacterSize(current->text, 20);
     sfText_setFillColor(current->text, sfColor_fromRGB(220, 220, 220));
     sfText_setString(current->text, my_itoa(current->name));
-    sfText_setOrigin(current->text, (sfVector2f){20, 20});
-    sfText_setPosition(current->text,
-        (sfVector2f){circle_radius, circle_radius});
+    bounds = sfText_getLocalBounds(current->text);
+    sfText_setPosition(current->text, (sfVector2f){circle_radius - bounds.width, circle_radius - bounds.height});
 }
 
 static void create_circle_for_rooms(void)
@@ -99,7 +102,6 @@ static void set_bot_features(
     new_bot->name = i + 1;
     new_bot->pos = start_room->pos;
     new_bot->speed = (sfVector2f){0, 0};
-    new_bot->move_vector = (sfVector2f){0, 0};
     sfRectangleShape_setPosition(new_bot->rect, new_bot->pos);
     new_bot->next = bots_info()->head;
 }
