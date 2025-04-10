@@ -70,7 +70,7 @@ BONUS_NAME = amazed_bonus
 bonus:	all
 		@make -C ./bonus
 
-bonus_re : bonus
+bonus_re :
 		@make re -C ./bonus
 
 bonus_help :

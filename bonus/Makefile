@@ -34,9 +34,8 @@ all	:	$(OBJ)
 
 clean	:
 			rm -rf $(OBJ)
-			rm ../$(NAME)
 
 fclean	:	clean
-			rm -rf $(NAME)
+			rm -rf ../$(NAME)
 
 re	:	fclean all
