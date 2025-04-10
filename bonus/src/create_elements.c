@@ -11,10 +11,8 @@ static void scale_and_position_rooms(
     float min_x, float min_y, float max_x, float max_y)
 {
     rooms_list_t *current = rooms_info()->head;
-    const float av_width = 1920 - 2 * 100;
-    const float av_height = 1080 - 2 * 100;
-    float x_scale = (max_x == min_x) ? 0 : (av_width / (max_x - min_x));
-    float y_scale = (max_y == min_y) ? 0 : (av_height / (max_y - min_y));
+    float x_scale = (max_x == min_x) ? 0 : ((1920 - 2 * 100) / (max_x - min_x));
+    float y_scale = (max_y == min_y) ? 0 : ((1080 - 2 * 100) / (max_y - min_y));
     sfFloatRect bounds;
 
     while (current != NULL) {
@@ -71,7 +69,8 @@ static void set_circle_features(rooms_list_t *current,
     sfText_setFillColor(current->text, sfColor_fromRGB(220, 220, 220));
     sfText_setString(current->text, my_itoa(current->name));
     bounds = sfText_getLocalBounds(current->text);
-    sfText_setPosition(current->text, (sfVector2f){circle_radius - bounds.width, circle_radius - bounds.height});
+    sfText_setPosition(current->text, (sfVector2f){
+        circle_radius - bounds.width, circle_radius - bounds.height});
 }
 
 static void create_circle_for_rooms(void)

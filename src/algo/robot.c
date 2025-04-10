@@ -10,7 +10,7 @@
 robot_t *init_robot(graph_t *graph)
 {
     robot_t *robot = malloc(sizeof(robot_t));
-    static int id = 0;
+    static int id = 1;
 
     if (!robot)
         return NULL;
