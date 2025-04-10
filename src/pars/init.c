@@ -70,6 +70,7 @@ int init(char **file, graph_t *graph)
     write(1, "#number_of_robots\n", 18);
     write(1, file[0], my_strlen(file[0]));
     write(1, "\n", 1);
+    graph->nb_robots = nb_robot;
     graph->nb_node = get_nb_node(file);
     init_name(graph);
     graph->mat = malloc(sizeof(int *) * (graph->nb_node + 1));

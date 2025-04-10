@@ -13,59 +13,85 @@ int get_idc_start(graph_t *graph)
 
     for (int i = 0; i < graph->nb_node; i++){
         if (graph->name[i] == start)
-           return i;
+            return i;
     }
     return -1;
 }
 
+void check_room(room_t **rooms, int idc, int i)
+{
+    if (rooms[idc]->cost != -2 && rooms[i]->cost >= 0){
+        if (rooms[idc]->cost <= 0){
+            rooms[idc]->cost = 1 + rooms[i]->cost;
+            return;
+        }
+        if (rooms[i]->cost + 1 < rooms[idc]->cost)
+            rooms[idc]->cost = 1 + rooms[i]->cost;
+    }
+}
+
 int dfs(graph_t *graph, room_t **rooms, int idc)
 {
-
-    //printf("room %i:\n", rooms[idc]->name);
-    for (int i = 0; i < graph->nb_node; i++)
-        //printf("%i", graph->mat[idc][i]);
-    //printf("\n");
     if (rooms[idc]->name == graph->last){
         rooms[idc]->cost = 0;
         return 0;
     }
     rooms[idc]->is_visited = 1;
-    //printf("is visited\n");
+    if (rooms[idc]->cost == -2)
+        rooms[idc]->cost = -1;
     for (int i = 0; i < graph->nb_node; i++){
         if (graph->mat[idc][i] == 0)
             continue;
-        if (!rooms[i]->is_visited) {
-            //printf("romms numero -> %i\n", rooms[i]->name);
-            dfs(graph, rooms, i);    
-            if (rooms[idc]->cost == 0 || rooms[idc]->cost > rooms[i]->cost + 1){
-                rooms[idc]->cost = 0;
-                rooms[idc]->cost += 1 + rooms[i]->cost;
-            }
+        if (!rooms[i]->is_visited){
+            dfs(graph, rooms, i);
+            check_room(rooms, idc, i);
         }
     }
-    return -1;
+    rooms[idc]->is_visited = 0;
+    return 0;
 }
 
-char call_dfs(graph_t *graph)
+static char check_path(room_t **rooms)
+{
+    for (int i = 0; rooms[i]; i++)
+        if (rooms[i]->cost == 0)
+            return 1;
+    return 0;
+}
+
+room_t **create_room(graph_t *graph)
 {
     room_t **rooms = malloc(sizeof(room_t *) * (graph->nb_node + 1));
 
     if (!rooms)
-        return 84;
+        return NULL;
     for (int i = 0; i < graph->nb_node; i++){
         rooms[i] = malloc(sizeof(room_t));
         if (!rooms[i]){
             free(rooms);
-            return 84;
+            return NULL;
         }
         rooms[i]->name = graph->name[i];
-        rooms[i]->cost = 0;
+        rooms[i]->cost = -2;
         rooms[i]->is_visited = 0;
+        rooms[i]->is_occuped = 0;
     }
-    printf("\n");
     rooms[graph->nb_node] = NULL;
+    return rooms;
+}
+
+char call_dfs(graph_t *graph)
+{
+    room_t **rooms = create_room(graph);
+
+    if (!rooms)
+        return 84;
     dfs(graph, rooms, get_idc_start(graph));
+    if (!check_path(rooms))
+        return 84;
+    robot_move(graph, rooms);
     for (int i = 0; rooms[i]; i++)
-        printf("rooms [name: %i\ncost: %i\nis_visited: %i]\n",rooms[i]->name, rooms[i]->cost, rooms[i]->is_visited);
+        free(rooms[i]);
+    free(rooms);
     return 0;
 }

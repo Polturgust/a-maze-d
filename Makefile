@@ -10,6 +10,7 @@ SRC =	src/pars/parsing.c \
 		src/pars/add.c \
 		src/del.c \
 		src/algo/dfs.c \
+		src/algo/robot.c \
 
 MAIN =	src/main.c \
 

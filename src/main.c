@@ -28,7 +28,9 @@ int main(int argc, char **argv)
     info_graph = pars();
     if (!info_graph)
         return 84;
-    printf("caca\n");
+    if (!info_graph->nb_robots)
+        return 0;
+    my_printf("#moves\n");
     call_dfs(info_graph);
     del_graph(info_graph);
     return 0;
