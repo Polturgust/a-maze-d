@@ -33,8 +33,8 @@ all	:	$(OBJ)
 		mv $(NAME) ../$(NAME)
 
 clean	:
-		rm -rf $(OBJ)
-		rm ../$(NAME)
+			rm -rf $(OBJ)
+			rm ../$(NAME)
 
 fclean	:	clean
 			rm -rf $(NAME)
