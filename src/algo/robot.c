@@ -15,7 +15,7 @@ robot_t *init_robot(graph_t *graph)
     if (!robot)
         return NULL;
     robot->id = id;
-    robot->pos = graph->first;
+    robot->pos = get_idc_start(graph);
     id++;
     return robot;
 }
@@ -36,7 +36,7 @@ int change_room(graph_t *graph, room_t **rooms, int idc_rooms, robot_t *robot)
     if (!rooms[idc_rooms]->is_occuped){
         robot->pos = idc_rooms;
         retval = 1;
-        my_printf("P%i-%i ", robot->id, robot->pos);
+        my_printf("P%i-%i ", robot->id, graph->name[robot->pos]);
     }
     if (graph->name[robot->pos] != graph->last)
         rooms[robot->pos]->is_occuped = 1;

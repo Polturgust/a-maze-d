@@ -25,7 +25,6 @@ OBJ	=	$(MAIN:.c=.o) $(SRCS:.c=.o)
 
 CFLAGS	=	 -Wextra -Wall -I./includes -lcsfml-graphics \
 			-lcsfml-window -lcsfml-system -lcsfml-audio -lm
-
 CC	=	gcc
 
 all	:	$(OBJ)

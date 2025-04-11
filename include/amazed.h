@@ -53,6 +53,7 @@ typedef struct robot_s {
 // else it return null
 //
 ///////////////////
+int get_idc_start(graph_t *graph);
 void robot_move(graph_t *graph, room_t **room);
 char call_dfs(graph_t *graph);
 int dfs(graph_t *graph, room_t **rooms, int idc);

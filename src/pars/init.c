@@ -19,7 +19,7 @@ static int get_nb_node(char **file)
         if (file[i][0] == '#')
             continue;
         line = str_to_word_array(file[i], " ");
-        size_line  =my_arraylen(line);
+        size_line = my_arraylen(line);
         destroy_array((void **)line);
         if (size_line != 3)
             break;
