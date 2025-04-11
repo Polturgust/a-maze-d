@@ -24,7 +24,7 @@ INCLUDE = -I./include/
 
 LIB = -L./lib/ -lmy -llist
 
-CFLAGS = -Wall -Wextra -Werror -g3
+CFLAGS = -Wall -Wextra -Werror
 
 all: buildlib $(OBJ)
 		@$(CC) -o $(NAME) $(OBJ) $(INCLUDE) $(LIB) $(CFLAGS)
