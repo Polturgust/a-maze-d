@@ -40,8 +40,6 @@ SRC =   my_put_uint.c \
         recup_modul.c \
 		str_is.c \
 		is.c \
-		is2.c \
-		is3.c \
 		my_str.c \
 		my_str2.c \
 		error_output.c \
